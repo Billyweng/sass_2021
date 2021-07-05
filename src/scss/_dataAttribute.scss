@@ -1,0 +1,5 @@
+@for $i from 0 through 20 {
+    [data-inset="#{$i * 0.1}rem"] {
+        padding: $i * 0.1rem;
+    }
+}
