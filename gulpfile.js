@@ -11,6 +11,7 @@ function styles() {
 			// 指定要處理的 Scss 檔案目錄
 			.src("./src/scss/**/*.scss")
 			.pipe(sourcemaps.init())
+			.pipe(autoprefixer())
 			// 編譯 Scss
 			.pipe(gulpSass({
 				outputStyle: 'compressed'
