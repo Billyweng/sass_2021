@@ -1,0 +1,27 @@
+@mixin flexBox($direction, $alignItems, $justifyContent) {
+    /*這串是把每一個細項變數整合成一個mixin，然後像是display 是不變的也可以直接打在裡面，方便後面不需要再多打一次
+    打法   < @mixin "變數命名" (細項變數) >*/
+    display: flex;
+    flex-direction: $direction;
+    align-items: $alignItems;
+    justify-content: $justifyContent;
+}
+
+@mixin boxSizing {
+    box-sizing: border-box;
+}
+/*每一個 mixin 都對應一個 include*/
+
+@for $i from 0 through 24{
+    .flex_#{$i}{
+        flex:$i;
+    }
+}
+
+@for $i from 1 through 20{
+    [data-row-count="#{$i}"] {
+        .data_row{
+            width:calc(100%/ #{$i});
+        }
+    }
+}
