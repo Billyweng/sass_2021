@@ -1,6 +1,5 @@
 const gulp = require('gulp')       // 載入 gulp
 const gulpSass = require('gulp-sass')  // 載入 gulp-sass
-const autoprefixer = require('gulp-autoprefixer')
 const browserSync = require('browser-sync').create()
 const connect = require('gulp-connect')
 const sourcemaps = require("gulp-sourcemaps")
@@ -11,7 +10,6 @@ function styles() {
 			// 指定要處理的 Scss 檔案目錄
 			.src("./src/scss/**/*.scss")
 			.pipe(sourcemaps.init())
-			.pipe(autoprefixer())
 			// 編譯 Scss
 			.pipe(gulpSass({
 				outputStyle: 'compressed'
