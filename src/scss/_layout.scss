@@ -1,16 +1,20 @@
-.container {
-    @include flexBox(row, stretch, flex-start);
-    /*include flexBox()這段裡面的內容是去設定裡面宣告出來的變數內容*/
+.data_row {
     @include boxSizing();
-    padding: 1rem;
-    flex-wrap:wrap;
-    .data_row {
-        @include boxSizing();
-        border: 1px solid #ccc;
-        min-height:60px;
-        word-break: break-all;
-    }
-
-
+    border: 1px solid #ccc;
+    min-height: 60px;
+    word-break: break-all;
 }
 
+.test {
+    width: 500px;
+    height: 300px;
+    border: 1px solid #333;
+}
+
+.xs-box {
+    display: block;
+    width: 60px;
+    height: 60px;
+    background: #333;
+    margin: 0.5rem;
+}
