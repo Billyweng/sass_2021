@@ -18,3 +18,17 @@
     background: #333;
     margin: 0.5rem;
 }
+
+.relative{
+    position: relative;
+}
+.absolute{
+    position: absolute;
+    
+    &.right{
+        right: 0;
+    }
+    &.left{
+        left: 0;
+    }
+}
