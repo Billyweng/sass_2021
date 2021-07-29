@@ -6,19 +6,78 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap" rel="stylesheet">
   <title>SASS 2021</title>
 </head>
 
 <body>
- <div class="box-sizing relative row horizontal">
-   <img src="../src/img/mobile/bg.jpg" alt="bg">
+  <div class="width_20 height_20 bg">
+    <div class="top row horizontal height_3 width_20">
+      
+      <!-- 玩家資訊 -->
+      <div class="player row horizontal center width_4 height_12">
+        
+        <!-- 玩家頭像 -->
+        <div class="flex_1 row horizontal center height_20">
+          <div class="player_img height_15 width_15 "></div>
+        </div>
+        <!-- 玩家姓名經驗 -->
+        <div class=" flex_2 row vertical v_center left height_20">
+          <div class="padding_v_1"><p>加倍奉還環環環環環</p></div>
+          <div class="lv  width_18 height_6"></div>
+        </div>
+        <!-- 星星數 -->
+        <div class="line flex_1 height_20"></div>
+      </div>
 
-   <div class="box-sizing absolute left"  data-row-count="5">
-    <img src="../src/img/mobile/user_status_bg.png" alt="">
+      <!-- 金錢 -->
+      <div class="money  width_6 height_10"></div>
+
+      <!-- 上方選單 -->
+      <div class="menu  width_9 height_20 row horizontal space_evenly">
+        <div class="menu_1"></div>
+        <div class="menu_2"></div>
+        <div class="menu_3"></div>
+        <div class="menu_4"></div>
+        <div class="menu_5"></div>
+      </div>
+      
+    </div>
+
+    
+
+    <div class="row horizontal v_center height_12">
+      
+      <!-- 禮包區 -->
+      <div class=" line row vertical height_20 width_5">
+        <div class="quest_header flex_1 width_20 "></div>
+        <div class=" width_20 flex_1 ">
+          <div class="quest width_20 height_18"><div class="quest_grow"></div></div>
+          
+        </div>
+        
+        <div class=" width_20 flex_1 "><div class="quest  width_20 height_18"></div></div>
+        <div class=" width_20 flex_1 "><div class="quest  width_20 height_18"></div></div>
+        <div class=" width_20 flex_1 "><div class="quest  width_20 height_18"></div></div>
+      </div>
+      <!-- 選房 -->
+      <div class="room row horizontal h_center line height_20 width_15">
+        <div class="room_1"></div>
+        <div class="room_2"></div>
+        <div class="room_3"></div>
+      </div>
+    </div>
+
+    <div class="bottom line row horizontal bottom_left height_5">
+      <!-- 聊天室 -->
+      <div class="line height_20 width_7"></div>
+      <!-- 下方選單 -->
+      <div class="line height_8 width_13"></div>
+    </div>
+    
   </div>
-
- </div>
- 
 </body>
 
 </html>

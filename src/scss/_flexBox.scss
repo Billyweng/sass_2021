@@ -9,6 +9,7 @@
     box-sizing: border-box;
 }
 
+
 // [class^="row"] {
 //     background: rgb(101, 229, 238);
 // }
@@ -23,6 +24,24 @@
     }
 }
 
+@for $i from 0 through 20{
+    .width_#{$i}{
+        width: calc(5% * #{$i});
+        @if $i == 0{
+            width: auto;
+        }
+    }
+}
+
+@for $i from 0 through 20{
+    .height_#{$i}{
+        height: calc(5% * #{$i});
+        @if  $i == 0 {
+            height: auto;
+        }
+    }
+}
+
 @for $i from 1 through 20 {
     [data-row-count="#{$i}"] {
         .data_row {
@@ -31,10 +50,40 @@
     }
 }
 
+@for $i from 0 through 5{
+    .menu_#{$i}{
+        @extend .flex_1;
+        @extend .height_20;
+        background: url("../img/pc/top_menu_0#{$i}.png") no-repeat center;
+        background-size: contain;
+    }
+}
+
+@for $i from 0 through 3 {
+    .room_#{$i}{
+        @extend .flex_1;
+        @extend .height_20;
+        background: url("../img/pc/game0#{$i}.png") no-repeat center;
+        background-size: contain;
+    }
+    
+}
+
+@for $i from 0 through 6{
+    .padding_#{$i}{
+        padding: calc(0.5rem * #{$i});
+    }
+}
+
+@for $i from 0 through 6{
+    .padding_v_#{$i}{
+        padding: calc(0.5rem * #{$i}) 0;
+    }
+}
+
+
 .row {
     @include boxSizing;
-    position: relative;
-    width: 100%;
     margin: 0;
 
     &.horizontal {
@@ -42,6 +91,16 @@
         
         &.v_center {
             @include flexBox(row, center, flex-start);
+
+            &.left{
+                justify-content: flex-start;
+            }
+            &.center{
+                justify-content: center;
+            }
+            &.right{
+                justify-content: flex-end;
+            }
         }
 
         &.h_center {
@@ -74,6 +133,15 @@
         
         &.v_center {
             @include flexBox(column, flex-start, center);
+            &.left{
+                justify-content: flex-start;
+            }
+            &.center{
+                justify-content: center;
+            }
+            &.right{
+                justify-content: flex-end;
+            }
         }
 
         &.h_center {
@@ -104,6 +172,7 @@
 
     &.space_between {
         justify-content: space-between;
+        align-items: center;
     }
 
     &.space_around {
@@ -117,5 +186,22 @@
 
     &.wrap {
         flex-wrap: wrap;
+    }
+}
+
+.absolute{
+    position: absolute;
+    
+    &.right{
+        right: 0;
+    }
+    &.left{
+        left: 0;
+    }
+    &.top{
+        top: 0;
+    }
+    &.bottom{
+        bottom: 0;
     }
 }

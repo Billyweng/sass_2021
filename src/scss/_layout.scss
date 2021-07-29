@@ -1,34 +1,99 @@
+
+
+p{
+    font-family: 'Kosugi Maru' ;
+    color: aliceblue;
+}
+
+img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+ 
+/*class*/
+
 .data_row {
     @include boxSizing();
-    border: 1px solid #ccc;
-    min-height: 60px;
     word-break: break-all;
 }
 
-.test {
-    width: 500px;
-    height: 300px;
-    border: 1px solid #333;
+.line{
+    @include boxSizing();
+    border: 2px solid red;
 }
 
-.xs-box {
+.bg{
     display: block;
-    width: 60px;
-    height: 60px;
-    background: #333;
-    margin: 0.5rem;
+    background: url("../img/pc/bg.jpg") no-repeat;
+    height: 100%;
 }
 
-.relative{
-    position: relative;
+.player{
+    background: url("../img/pc/user_status_bg.png") no-repeat;
+    background-size: contain;
 }
-.absolute{
-    position: absolute;
+
+.player_img{
+    // border: blue 1px solid;
+    position: relative;
     
-    &.right{
-        right: 0;
-    }
-    &.left{
-        left: 0;
-    }
+}
+
+.player_img::after{
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+    border-radius: 50%;
+    background: url("../img/pc/user.jpg")no-repeat center;
+    background-size: cover;
+}
+
+.lv{
+    border-radius: 40px;
+    background: black;
+}
+
+.quest_header{
+    position: relative;
+    
+}
+
+.quest_header::after{
+    width: 100%;
+    height: 150%;
+    content: "";
+    display: block;
+    position:absolute;
+    top:-4rem;
+    background: url("../img/pc/daily_quest_header.png")no-repeat center;
+    background-size: contain;
+}
+
+.quest{
+    z-index: 4;
+    display: block;
+    background: url("../img/pc/quest_bg.png")no-repeat center;
+    background-size: contain;
+    
+}
+
+.quest_grow{
+    display: none;
+}
+
+.quest:hover{
+    cursor: pointer;
+}
+
+.quest:hover > .quest_grow{
+    content: "";
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    display: block;
+   
+    background:url("../img/pc/quest_bg_blur.png") no-repeat center;
+    background-size: contain;
+    
 }
