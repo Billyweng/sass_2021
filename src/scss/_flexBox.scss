@@ -82,6 +82,28 @@
 }
 
 
+@for $i from 0 through 4{
+    .fish_#{$i}{
+        position: absolute;
+        right: -3rem;
+        background: url(../img/pc/fish_#{$i}.png) no-repeat center;
+        background-size: contain;
+        @if $i == 4 {
+            background: url("../img/pc/treasurebox.png") no-repeat center;
+            background-size: contain;
+        }
+    }
+}
+
+
+@for $i from 0 through 6{
+    .bottom_menu_0#{$i}{
+        background: url("../img/pc/bottom_menu_0#{$i}.png") no-repeat center;
+        background-size: contain;
+    }
+}
+
+
 .row {
     @include boxSizing;
     margin: 0;
@@ -187,6 +209,10 @@
     &.wrap {
         flex-wrap: wrap;
     }
+}
+
+.relative{
+    position: relative;
 }
 
 .absolute{
