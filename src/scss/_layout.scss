@@ -174,11 +174,37 @@ img{
 }
 
 input[type="text"]{
+    position: absolute;
+    right: 3rem;
+    bottom: 0.1rem;
     margin: 0.5rem;
     height: 18%;
-    width: 90%;
+    width: 85%;
     background: #115a8b;
     border: none;
+    border-radius: 8px;
+}
+
+.talk_button{
+   right: 4rem;
+   bottom: 0.8rem;
+   background: none;
+   border: none;
+}
+
+.airplane1{
+    width: 0;
+height: 0;
+border-style: solid;
+border-width: 18px 0 0 24px;
+border-color: transparent transparent transparent #94beec;
+}
+.airplane2{
+    width: 0;
+height: 0;
+border-style: solid;
+border-width: 18px 24px 0px 0px;
+border-color: #94beec transparent transparent transparent;
 }
 
 .lock{
