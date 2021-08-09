@@ -24,28 +24,20 @@
     }
 }
 
-@for $i from 0 through 20{
+@for $i from 0 through 100{
     .width_#{$i}{
-        width: calc(5% * #{$i});
+        width: calc(1% * #{$i});
         @if $i == 0{
             width: auto;
         }
     }
 }
 
-@for $i from 0 through 20{
+@for $i from 0 through 100{
     .height_#{$i}{
-        height: calc(5% * #{$i});
+        height: calc(1% * #{$i});
         @if  $i == 0 {
             height: auto;
-        }
-    }
-}
-
-@for $i from 1 through 20 {
-    [data-row-count="#{$i}"] {
-        .data_row {
-            width: calc(100% / #{$i});
         }
     }
 }
@@ -53,7 +45,7 @@
 @for $i from 0 through 5{
     .menu_#{$i}{
         @extend .flex_1;
-        @extend .height_20;
+        @extend .height_100;
         background: url("../img/pc/top_menu_0#{$i}.png") no-repeat center;
         background-size: contain;
     }
@@ -62,7 +54,7 @@
 @for $i from 0 through 3 {
     .room_#{$i}{
         @extend .flex_1;
-        @extend .height_20;
+        @extend .height_100;
         background: url("../img/pc/game0#{$i}.png") no-repeat center;
         background-size: contain;
     }
@@ -194,7 +186,17 @@
 
     &.space_between {
         justify-content: space-between;
-        align-items: center;
+        
+        &.center{
+            align-items: center;
+        }
+
+        &.start{
+            align-items: flex-start;
+        }
+        &.end{
+            align-items: flex-end;
+        }
     }
 
     &.space_around {

@@ -2,10 +2,16 @@
     [data-inset="#{$i * 0.5}rem"] {
         padding: $i * 0.5rem;
     }
+    [data-hinset="#{$i*0.5}rem"]{
+        padding: 0 $i*0.5rem;
+    }
+    [data-vinset="#{$i*0.5}rem"]{
+        padding:$i*0.5rem 0rem;
+    }
 }
 
 @for $i from 0 through 100 {
     [data-width="#{$i}%"] {
-        width: $i * 1%;
+        width: $i * 1vh;
     }
 }
