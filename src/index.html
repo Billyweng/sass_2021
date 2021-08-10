@@ -23,20 +23,24 @@
       <!-- 玩家資訊 -->
       <div class="player_info line relative row horizontal ">
 
-        <div class="player_background">
-          <div class="line player row horizontal space_between center">  
+        <div class="player_background width_100 height_100">
+          <div class="line player row horizontal space_between">  
             <!-- 玩家頭像 -->
-            <div class="line player_img" data-inset="1rem"></div>
+            <div class="line player_img"></div>
           
             <!-- 玩家姓名經驗 -->
             <div class="line row vertical space_evenly left height_100 width_100 flex_1 " data-hinset="1rem">
               <div class="padding_v_1"><p>加倍奉還環環環環環</p></div>
-              <div class="lv  width_100 height_30"></div>
+              <div class="lv relative width_100 height_30">
+                <div class="lv_bar width_100 height_100"></div>
+                <div class="lv_number">lv100</div>
+              </div>
+              
             </div>
 
             <!-- 星星數 -->
             <div class="line star_block row horizontal v_center" >
-              <div class="star width_50 height_50"></div>
+              <div class="star width_50 height_100"></div>
               <p>X 168</p>
             </div>
           </div>
@@ -47,18 +51,20 @@
 
          <!-- 金錢 -->
         <div class="line width_50 height_100 row vertical center"data-hinset="1rem">
-          <div class=" money width_100 height_40" ></div>  
+          <div class=" money" >
+            <div class="money_text row horizontal h_end"><p>20,000</p></div>
+          </div>  
         </div>
       
       </div>
   
 
       <!-- 上方選單 -->
-      <div class="line menu  width_40 height_50 row horizontal space_evenly">
+      <div class="line menu  width_40 height_100 row horizontal space_evenly">
         <div class="menu_1 relative button"></div>
         <div class="menu_2 relative button"><div class="count row horizontal center right"><p>9</p></div></div>
-        <div class="menu_3 relative button"><div class="new"><p>New</p></div></div>
-        <div class="menu_4 relative button"><div class="new"><p>New</p></div></div>
+        <div class="menu_3 relative button"><div class="new"></div></div>
+        <div class="menu_4 relative button"><div class="new"></div></div>
         <div class="menu_5 relative button"><div class="count row horizontal center right"><p>9</p></div></div>
       </div>
       
@@ -69,13 +75,13 @@
     <div class="row horizontal v_center height_60 width_100">
       
       <!-- 禮包區 -->
-      <div class=" line row vertical v_center padding_2 height_100 width_25">
+      <div class=" line row vertical v_center padding_1 height_100 width_30">
         <div class="quest_header relative flex_1 width_100 "></div>
         
         <!-- 1 -->
         <div class="relative width_75 flex_1 ">
           <div class="quest line button row horizontal center width_100 height_90">
-            <div class="relative row horizontal v_center line width_100 height_90">
+            <div class="relative row horizontal center line width_70 height_90">
               <div class="lock width_0 height_50"></div>
               <div class="text"><p>完成1次連鎖</p></div>
               <div class="fish_1 height_100 width_40 "></div>
@@ -121,7 +127,7 @@
         </div>
       </div>
       <!-- 選房 -->
-      <div class="room row horizontal  space_around line height_100 width_75">
+      <div class="room row horizontal  space_around line height_100 width_70">
         <div class="room_1 button"></div>
         <div class="room_2 button"></div>
         <div class="room_3 button"></div>
