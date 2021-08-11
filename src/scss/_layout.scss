@@ -20,7 +20,7 @@ img{
 
 .line{
     @include boxSizing();
-//    border: 2px solid red;
+    border: 2px solid red;
  }
 
 .bg{
@@ -205,7 +205,7 @@ img{
     background-size: contain;
 }
 
-.talk_st{
+.talk_bg{
     border: 1px solid rgb(9, 95, 175);
     background: rgb(2, 26, 48);
     opacity: 80%;

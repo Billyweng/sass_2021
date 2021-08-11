@@ -77,7 +77,7 @@
 @for $i from 0 through 4{
     .fish_#{$i}{
         position: absolute;
-        right: -3rem;
+        right: -6vh;
         background: url(../img/pc/fish_#{$i}.png) no-repeat center;
         background-size: contain;
         @if $i == 4 {
