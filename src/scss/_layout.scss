@@ -20,7 +20,7 @@ img{
 
 .line{
     @include boxSizing();
-//   border: 2px solid red;
+//    border: 2px solid red;
  }
 
 .bg{
@@ -164,7 +164,7 @@ img{
     content: "";
     display: block;
     position:absolute;
-    top:-4rem;
+    top:-5vh;
     left: -2rem;
     background: url("../img/pc/daily_quest_header.png")no-repeat center;
     background-size: contain;
@@ -268,13 +268,15 @@ border-color: #94beec transparent transparent transparent;
 }
 
 .lock{
-    padding-left: 6rem;
+    padding-left: 2rem;
     background: url("../img/pc/lock.png")no-repeat center;
     background-size: contain;
 }
 
 .text p{
-    font-size: 1.8rem;
+    font-family: "Microsoft JhengHei";
+    font-weight: bold;
+    font-size: 3vh;
     background: linear-gradient( 180deg, #ffdf88 50%, #c57a08 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
