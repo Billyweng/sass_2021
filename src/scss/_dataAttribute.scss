@@ -11,7 +11,7 @@
 }
 
 @for $i from 0 through 100 {
-    [data-vh="#{$i}%"] {
+    [data-vh="#{$i}vh"] {
         width: $i * 1vh;
     }
 }

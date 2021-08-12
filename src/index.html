@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="user-scalable=no, width=device-width, maximum-scale=1">
   <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -81,7 +81,7 @@
         <!-- 1 -->
         <div class="relative width_75 flex_1 ">
           <div class="quest line button row horizontal center width_100 height_90">
-            <div class="relative row horizontal v_center line height_90" data-vh="33%">
+            <div class="relative row horizontal v_center line height_90" data-vh="33vh">
               <div class="lock width_10 height_50"></div>
               <div class="text"><p>完成1次連鎖</p></div>
               <div class="fish_1 height_100 width_40 "></div>
@@ -93,7 +93,7 @@
         <!-- 2 -->
         <div class="relative width_75 flex_1 ">
           <div class="quest line button row horizontal center width_100 height_90">
-            <div class="relative row horizontal v_center line height_90" data-vh="33%">
+            <div class="relative row horizontal v_center line height_90" data-vh="33vh">
               <div class="lock width_10 height_50"></div>
               <div class="text"><p>完成次2連鎖</p></div>
               <div class="fish_2 height_100 width_40 "></div>
@@ -105,7 +105,7 @@
         <!-- 3 -->
         <div class="relative width_75 flex_1 ">
           <div class="quest line button row horizontal center width_100 height_90">
-            <div class="relative row horizontal v_center line height_90" data-vh="33%">
+            <div class="relative row horizontal v_center line height_90" data-vh="33vh">
               <div class="lock width_10 height_50"></div>
               <div class="text"><p>不使用接關道具</p></div>
               <div class="fish_3 height_100 width_40 "></div>
@@ -117,7 +117,7 @@
         <!-- 4 -->
         <div class="relative width_75 flex_1 ">
           <div class="quest line button row horizontal center width_100 height_90">
-            <div class="relative row horizontal v_center line height_90" data-vh="33%">
+            <div class="relative row horizontal v_center line height_90" data-vh="33vh">
               <div class="lock width_10 height_50"></div>
               <div class="text"><p>等級100時開放</p></div>
               <div class="fish_4 height_100 width_40 "></div>
@@ -136,8 +136,12 @@
 
     <div class="bottom line row horizontal bottom_left height_25 width_100">
       <!-- 聊天室 -->
-      <div class="line relative row horizontal talk_bg height_100" data-vh="70%">
-        <div class="line height_100 width_85"></div>
+      <div class="line relative row horizontal talk_bg height_100" data-vh="70vh">
+        <div class="line row vertical space_between height_100 width_85">
+          <div class="line message width_100 height_80"></div>
+          <div class="line input width_100 height_20"></div>
+        </div>
+        <!-- 左邊欄位 -->
         <div class="line row vertical space_between height_100 width_15">
           <div class="line width_100 height_20 talk_btn1"></div>
           <div class="line width_100 height_20 talk_btn2"></div>
