@@ -8,8 +8,16 @@
     [data-vinset="#{$i*0.5}rem"]{
         padding:$i*0.5rem 0rem;
     }
+}
+@for $i from 0 through 50 {
     [data-inset="#{$i}px"]{
         padding: $i * 1px;
+    }
+    [data-hinset="#{$i}px"]{
+        padding: 0 $i * 1px;
+    }
+    [data-vinset="#{$i}px"]{
+        padding:$i * 1px 0;
     }
 }
 
