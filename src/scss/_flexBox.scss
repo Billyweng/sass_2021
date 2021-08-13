@@ -95,7 +95,18 @@
     }
 }
 
-
+@for $i from 0 through 2{
+    .talk_btn#{$i}{
+        width: 6vh;
+        height: 6vh;
+        @if $i == 1{
+            background: url("../img/pc/icon_arrow_up.svg")no-repeat center ;
+        }
+        @else{
+            background: url("../img/pc/icon_config.svg")no-repeat center;
+        }
+    }
+}
 
 
 .row {

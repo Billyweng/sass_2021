@@ -20,7 +20,7 @@ img{
 
 .line{
     @include boxSizing();
-    border: 2px solid red;
+    // border: 2px solid red;
  }
 
 .bg{
@@ -30,10 +30,13 @@ img{
     height: 100%;
 }
 
+.button:hover{
+    cursor: pointer;
+}
 
 
 
-
+/*--------------上方玩家資訊--------------*/
 .player_info{
     width: 70vh;
     height: 12vh;
@@ -83,6 +86,7 @@ img{
         }
 }
 
+  /*---------玩家等級-------------*/
  .lv_bar{
     border-radius: 40px;
     background: black;
@@ -106,12 +110,16 @@ img{
     top:0;
     left: 10%;
 }
-
+/*-------------星星------------*/
+.star{
+    background: url("../img/pc/star.svg")no-repeat center;
+    background-size: contain;
+}
 .star_block{
     width: 100px;
     height: 88px;
 }
-
+/*---------金錢----------*/
 .money{
     position: relative;
     background: #115a8b;
@@ -136,6 +144,9 @@ img{
     padding: 0.6rem 1rem 0.6rem 6rem;
     color: $lightGay;
 }
+
+
+/*-------------上方menu通知------------*/
 .count{
     @extend .height_20;
     @extend .width_20;
@@ -157,6 +168,15 @@ img{
 }
 
 
+/*-------------禮包-------------*/
+.quest{
+    
+    display: block;
+    background: url("../img/pc/quest_bg.png")no-repeat center;
+    background-size: contain;
+    position: absolute;
+    z-index: 999;
+}
 
 .quest_header::after{
     width: 100%;
@@ -170,16 +190,6 @@ img{
     background-size: contain;
 }
 
-.quest{
-    
-    display: block;
-    background: url("../img/pc/quest_bg.png")no-repeat center;
-    background-size: contain;
-    position: absolute;
-    z-index: 999;
-}
-
-
 .quest_grow{
     content: "";
     position: absolute;
@@ -191,80 +201,9 @@ img{
     transform: scale(1.02);
 }
 
-.button:hover{
-    cursor: pointer;
-}
-
 .quest:hover + .quest_grow{
     
     display: block;
-}
-
-.star{
-    background: url("../img/pc/star.svg")no-repeat center;
-    background-size: contain;
-}
-
-.talk_bg{
-    border: 1px solid rgb(9, 95, 175);
-    background: rgb(2, 26, 48);
-    opacity: 80%;
-}
-
-.talk{
-    overflow-y:scroll;
-}
-
-::-webkit-scrollbar-button:vertical:decrement{
-    height: 25%;
-    background: url("../img/pc/icon_arrow_up.svg")no-repeat center;
-    background-size: contain;
-   
-}
-
-::-webkit-scrollbar-button:vertical:increment{
- height: 25%;
- background: url("../img/pc/icon_config.svg")no-repeat center;
- background-size: contain;
-}
-
-::-webkit-scrollbar{
-    width: 3rem;
-    background: rgb(2, 26, 48);
-}
-
-input[type="text"]{
-    position: absolute;
-    right: 3rem;
-    bottom: 0.1rem;
-    margin: 0.5rem;
-    height: 18%;
-    width: 85%;
-    background: #115a8b;
-    border: none;
-    border-radius: 8px;
-}
-
-.talk_button{
-   right: 4rem;
-   bottom: 0.8rem;
-   background: none;
-   border: none;
-}
-
-.airplane1{
-    width: 0;
-height: 0;
-border-style: solid;
-border-width: 18px 0 0 24px;
-border-color: transparent transparent transparent #94beec;
-}
-.airplane2{
-    width: 0;
-height: 0;
-border-style: solid;
-border-width: 18px 24px 0px 0px;
-border-color: #94beec transparent transparent transparent;
 }
 
 .lock{
@@ -273,6 +212,8 @@ border-color: #94beec transparent transparent transparent;
     background-size: contain;
 }
 
+
+/*-----------------禮包文字------------------*/
 .text p{
     font-family: "Microsoft JhengHei";
     font-weight: bold;
@@ -282,6 +223,42 @@ border-color: #94beec transparent transparent transparent;
     -webkit-text-fill-color: transparent;
 }
 
+
+/*----------------下方對話框和menu--------------*/
+.message_bg{
+    padding: 8px 0px;
+    background: rgb(2, 26, 48);
+    opacity: 80%;
+}
+
+.message{
+    overflow-y: auto;
+}
+
+.tag-system{
+    padding: 6px 14px;
+    background: linear-gradient(to bottom, #f2ce00, #f26d00);
+    color: #FFFFFF;
+    text-align: center;
+    width: 100%;
+    max-width: 52px;
+    margin-right: 10px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    text-shadow: 1px 1px #000000;
+}
+
+input[type="text"]{
+    padding: 0 2px;
+    background: #115a8b;
+    border: none;
+    border-radius: 8px;
+    color: white;
+}
+
+
 .bottom_menu{
     background-color: rgb(7, 46, 82);
 }
+
+
