@@ -247,17 +247,79 @@ img{
     font-size: 1.2rem;
     text-shadow: 1px 1px #000000;
 }
+.tag-world{
+    padding: 6px 14px;
+    background: linear-gradient(to bottom, #00c2f2, #0400f2);
+    color: #FFFFFF;
+    text-align: center;
+    width: 100%;
+    max-width: 52px;
+    margin-right: 10px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    text-shadow: 1px 1px #000000;
+}
+.tag-ship{
+    padding: 6px 14px;
+    background: linear-gradient(to bottom, #f27500, #f20000);
+    color: #FFFFFF;
+    text-align: center;
+    width: 100%;
+    max-width: 52px;
+    margin-right: 10px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    text-shadow: 1px 1px #000000;
+}
+
 .txt-system{
-    color: white;
+    color: rgb(8, 173, 16);
+    word-break: break-word;
+}
+.txt-world{
+    color: #2c8fe0;
+    word-break: break-word;
+}
+.txt-ship{
+    color: #f20000;
     word-break: break-word;
 }
 
+
 input[type="text"]{
-    padding: 0 2px;
+    padding-left: 1rem;
     background: #115a8b;
     border: none;
     border-radius: 8px;
     color: white;
+}
+
+.send_icon{
+    position: absolute;
+    right: 8px;
+    top: 8px;
+
+    border-style: solid;
+    border-width: 12px 0 12px 26px;
+    border-color: transparent transparent transparent #19aaf8;
+}
+
+.chatlog-txt{
+    display: inline-block;
+    position: absolute;
+    right: -3.5rem;
+    top: 2.5rem;
+    color: #2c8fe0;
+    transform: rotate(90deg);
+
+    &.chatlog-txt::before{
+        content: "";
+        display: inline-block;
+        border: 1px solid #2c8fe0;
+        width: 10px;
+        height: 10px;
+        background-color: #2c8fe0;
+    }
 }
 
 
@@ -265,4 +327,11 @@ input[type="text"]{
     background-color: rgb(7, 46, 82);
 }
 
+
+.menu-txt{
+    @extend .chatlog-txt;
+    top:-1.5rem;
+    right: 0.5rem;
+    transform: rotate(0deg);
+}
 
